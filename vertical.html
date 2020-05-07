@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vertical.css">
+    <title>vertical menu</title>
+</head>
+<body>
+   
+   <!-- CONTAINER  -->
+   <div id="container">
+ 
+    <!-- HEADER  -->
+     <div class="header">
+      <h2>Vertical Tabs</h2>
+      <h3>Click on the buttons inside the tabbed menu:</h3>
+     </div>
+     <!-- END OF HEADER -->
+
+
+     <!-- MENU BUTTON -->
+    <div class="menu">
+
+       <ul  class="tab">
+        <li class="tablinks" onclick="Buttonclick(event, 'button-1')" id="defaultOpen">button-1</li>
+        <li class="tablinks" onclick="Buttonclick(event, 'button-2')">button-2</li>
+        <li class="tablinks" onclick="Buttonclick(event, 'button-3')">button-3</li>
+        <li class="tablinks" onclick="Buttonclick(event, 'button-4')">button-4</li>
+      </ul>
+    </div>
+    <!-- END OF  MENU BUTTON  -->
+
+
+    <!-- BOX CONTENT  -->
+    <div class="content">
+
+  <div id="button-1" class="inner-content">
+    <h1>Button 1 </h1>
+  <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, delectus odit debitis autem quibusdam cupiditate illo atque sequi provident possimus repellendus, ut sunt nisi fuga inventore voluptatem! Corrupti, blanditiis debitis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus enim officia doloremque, perferendis culpa harum ipsum! Vero eum autem, nobis, similique facilis sunt voluptate ad recusandae nesciunt aut, nihil nemo? </p>
+ 
+   </div>
+
+   <div id="button-2"class="inner-content">
+    <h1>Button 2 </h1>
+  <p class="btn-text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, delectus odit debitis autem quibusdam cupiditate illo atque sequi provident possimus repellendus, ut sunt nisi fuga inventore voluptatem! Corrupti, blanditiis debitis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus enim officia doloremque, perferendis culpa harum ipsum! Vero eum autem, nobis, similique facilis sunt voluptate ad recusandae nesciunt aut, nihil nemo? </p>
+ 
+   </div>
+
+   <div id="button-3"  class="inner-content">
+    <h1>Button 3 </h1>
+  <p  class="btn-text-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, delectus odit debitis autem quibusdam cupiditate illo atque sequi provident possimus repellendus, ut sunt nisi fuga inventore voluptatem! Corrupti, blanditiis debitis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus enim officia doloremque, perferendis culpa harum ipsum! Vero eum autem, nobis, similique facilis sunt voluptate ad recusandae nesciunt aut, nihil nemo? </p>
+ 
+   </div>
+
+   <div id="button-4"  class="inner-content">
+    <h1>Button 4 </h1>
+  <p   class="btn-text-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, delectus odit debitis autem quibusdam cupiditate illo atque sequi provident possimus repellendus, ut sunt nisi fuga inventore voluptatem! Corrupti, blanditiis debitis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus enim officia doloremque, perferendis culpa harum ipsum! Vero eum autem, nobis, similique facilis sunt voluptate ad recusandae nesciunt aut, nihil nemo? </p>
+ 
+   </div>
+    </div>
+    <!-- END OF BOX CONTENT  -->
+
+
+    <!-- FOOTER -->
+  <div class="footer"></div>
+
+   </div> 
+   <!-- END OF CONTAINER -->
+
+
+   <!-- Declaring  JAVASCRIPT  for BUTTUONS functions-->
+   <script>
+    function  Buttonclick(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("inner-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += "active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>
